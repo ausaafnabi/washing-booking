@@ -10,4 +10,5 @@ urlpatterns = [
     path('reset/done/', dViews.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
     path('password-change/', dViews.PasswordChangeView.as_view(), name='password_change'),
     path('password-change/done/', dViews.PasswordChangeDoneView.as_view(), name='password_change_done'),
+    path('login/', dViews.LoginView.as_view(), name='login'),
 ]

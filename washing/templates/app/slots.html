@@ -1,0 +1,20 @@
+{% extends  'base.html' %}
+{% load crispy_forms_tags %}
+{% block main %}
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Slots Available</h4>
+    <ul> 
+      {%for ord in slots%}
+        {%if ord.machineTime%}
+      <li>
+        <p>{{ord.machineTime}}</p>
+      </li>
+        {%else%}
+        <p>The slots are not available.</p>
+        {%endif%}
+      {%endfor%}
+    </ul>
+    </div>
+</div>
+{% endblock %}

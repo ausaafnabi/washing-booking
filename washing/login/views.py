@@ -8,4 +8,4 @@ def index(request):
         pass
     else:
         pass
-    return HttpResponse("Yay the app is working!!")
+    return render(request,"app/index.html")

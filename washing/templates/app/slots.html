@@ -4,17 +4,16 @@
 <div class="card">
   <div class="card-body">
     <h4 class="card-title">Slots Available</h4>
-    <ul> 
+      <div class="d-grid gap-2 col-4 mx-auto">
       {%for ord in slots%}
         {%if ord.machineTime%}
-      <li>
-        <p>{{ord.machineTime}}</p>
-      </li>
+          <button class="btn btn-outline-success btn-outline" type="button">{{ord.machineTime}}</button></div><br/>
         {%else%}
         <p>The slots are not available.</p>
         {%endif%}
       {%endfor%}
-    </ul>
+      <div class="form-crispr" ></div>
+      </div>
     </div>
 </div>
 {% endblock %}

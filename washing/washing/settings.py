@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u3-^_eyd-)i4rbz-v_i^e+z&ybeeyisipdfgebjzf#a448c2b&
 DEBUG = True
 
 ALLOWED_HOSTS = ["https://8000-ausaafnabi-washingbooki-y454rrsw2ii.ws-eu75.gitpod.io/","localhost"]
-CSRF_TRUSTED_ORIGINS = ["https://8000-ausaafnabi-washingbooki-y454rrsw2ii.ws-eu75.gitpod.io"]
+CSRF_TRUSTED_ORIGINS = ["https://8000-ausaafnabi-washingbooki-y454rrsw2ii.ws-eu74.gitpod.io"]
 LOGIN_REDIRECT_URL = "/slot"
 
 # Application definition

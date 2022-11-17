@@ -7,8 +7,6 @@ from slot.models import Slot
 @login_required()
 def slot(request): 
     slot = Slot.objects.all()
-    
-    print(slot)
     context = {"slots": slot}
     if request.method == 'POST':
         pass

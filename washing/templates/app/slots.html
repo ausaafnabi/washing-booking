@@ -16,6 +16,7 @@
             </button>
           </div>
         </div>
+        <canvas class="my-4 chartjs-render-monitor" id="myChart" width="1066" height="450" style="display: block; height: 225px; width: 533px;"></canvas>
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
           <div class="card">
             <div class="card-body">
@@ -23,29 +24,8 @@
               <div class="d-grid gap-2 mx-auto">
               {%if slots%}
                 {%for ord in slots%}
-                  {%if ord.machineTime%}
-                    <button class="btn btn-block btn-outline-success btn-outline" type="button">{{ord.machineTime}}</button><br/>                    
-                  {%endif%}
-                {%endfor%}
-                {%else%}
-                  <p>The slots are not available.</p>
-                {%endif%}
-              </div>
-              <div class="form-crispr" ></div>
-            </div>
-          </div>
-        </div>
-
-        <canvas class="my-4 chartjs-render-monitor" id="myChart" width="1066" height="450" style="display: block; height: 225px; width: 533px;"></canvas>
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Slots Available</h4>
-              <div class="d-grid gap-2 col-4 mx-auto">
-              {%if slots%}
-                {%for ord in slots%}
-                  {%if ord.machineTime%}
-                    <button class="btn btn-outline-success btn-outline" type="button">{{ord.machineTime}}</button><br/>                    
+                  {%if ord.start%}
+                    <button class="btn btn-block btn-outline-success btn-outline" type="button">{{ord.start}}-{{ord.end}}</button><br/>                    
                   {%endif%}
                 {%endfor%}
                 {%else%}

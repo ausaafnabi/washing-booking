@@ -1,0 +1,23 @@
+{% extends  'base-app.html' %}
+{% load crispy_forms_tags %}
+{% block main %}
+<div class="my-3">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 fw-bold lh-1">Find the Machine that suits you..</h1>
+            <p class="lead"></p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold mx-2">Book Now</button>
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4 mx-2">Add yours</button>
+            </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <!--https://www.freepnglogos.com/uploads/washing-machine-png/washing-machine-washing-machines-front-load-washers-electrolux-0.png-->
+          <img class="rounded-lg-3" src="https://media3.giphy.com/media/hdpxCZLrJWxDfkYxI5/giphy.gif?cid=6c09b952e98192024e51eb977e906de3a334d6daca60e145&rid=giphy.gif&ct=s" alt="" width="400">
+      </div>
+    </div>
+</div>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+    <h1 class="h2">Machines</h1>
+</div>
+{% endblock %}

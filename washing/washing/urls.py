@@ -25,4 +25,5 @@ urlpatterns = [
     path('accounts/', include('login.urls')),
     path('',views.index),
     path('slot/',appView.slot),
+    path('machine/',appView.machines)
 ]

@@ -20,4 +20,20 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
     <h1 class="h2">Machines</h1>
 </div>
+<div class="d-grid gap-2 mx-auto">
+  {%if machines%}
+    {%for ord in machines%}
+    <p>{{ord.macName}}</p>
+    <p>{{ord.slots}}</p>
+    <p>{{ord.address}}</p>
+    <p>{{ord.comments}}</p>
+    <p>{{ord.status}}</p>
+      <!-- {%if ord.start%}
+        <button class="btn btn-block btn-outline-success btn-outline" type="button">{{ord.start}}-{{ord.end}}</button><br/>                    
+      {%endif%} -->
+    {%endfor%}
+    {%else%}
+      <p>The Machines are not available.</p>
+    {%endif%}
+</div>
 {% endblock %}

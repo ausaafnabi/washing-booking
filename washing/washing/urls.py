@@ -21,8 +21,8 @@ from slot import views as appView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path("accounts/", include("django.contrib.auth.urls")),
-    path('accounts/', include('login.urls')),
+    path("accounts/", include("django.contrib.auth.urls")),
+    #path('accounts/', include('login.urls')),
     path('',views.index),
     path('slot/',appView.slot),
     path('machine/',appView.machines)

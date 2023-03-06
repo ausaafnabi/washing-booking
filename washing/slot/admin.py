@@ -3,7 +3,6 @@ from slot.models import Slot,Booking,Machine
 
 class SlotAdmin(admin.ModelAdmin):
     pass
-
 class BookingAdmin(admin.ModelAdmin):
     pass
 class MachineAdmin(admin.ModelAdmin):

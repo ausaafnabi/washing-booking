@@ -24,6 +24,7 @@ SECRET_KEY = 'django-insecure-u3-^_eyd-)i4rbz-v_i^e+z&ybeeyisipdfgebjzf#a448c2b&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+import socket
 def get_ipaddress():
     host_name = socket.gethostname()
     ip_address = socket.gethostbyname(host_name) 

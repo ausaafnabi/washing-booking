@@ -1,6 +1,8 @@
-echo "Setting up the machine for configuration...."
-echo "Structuring the migrations...."
 cd washing
+echo "Setting up the machine for configuration...."
+echo "Installing Deps..."
+pip install -r requirements.txt
+echo "Structuring the migrations...."
 python manage.py makemigrations 
 python manage.py migrate
 echo "Migration Successful..."

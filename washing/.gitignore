@@ -13,6 +13,7 @@ Icon
 __pycache__
 db.sqlite3
 media
+migrations/
 
 # Thumbnails
 ._*

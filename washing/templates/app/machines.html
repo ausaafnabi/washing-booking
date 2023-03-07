@@ -23,11 +23,40 @@
 <div class="d-grid gap-2 mx-auto">
   {%if machines%}
     {%for ord in machines%}
-    <p>{{ord.macName}}</p>
-    <p>{{ord.slots}}</p>
-    <p>{{ord.address}}</p>
-    <p>{{ord.comments}}</p>
-    <p>{{ord.status}}</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ord.macName}}</h5>
+              <p class="card-text"><Address class="text-primary">Adress</Address>{{ord.address}}</p>
+              <p class="card-text">{{ord.status}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ord.macName}}</h5>
+              <p class="card-text"><Address class="text-primary">Adress</Address>{{ord.address}}</p>
+              <p class="card-text">{{ord.status}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ord.macName}}</h5>
+              <p class="card-text"><Address class="text-primary">Adress</Address>{{ord.address}}</p>
+              <p class="card-text">{{ord.status}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <br>
       <!-- {%if ord.start%}
         <button class="btn btn-block btn-outline-success btn-outline" type="button">{{ord.start}}-{{ord.end}}</button><br/>                    
       {%endif%} -->

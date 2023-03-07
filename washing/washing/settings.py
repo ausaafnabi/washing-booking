@@ -24,9 +24,14 @@ SECRET_KEY = 'django-insecure-u3-^_eyd-)i4rbz-v_i^e+z&ybeeyisipdfgebjzf#a448c2b&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+import socket
+def get_ipaddress():
+    host_name = socket.gethostname()
+    ip_address = socket.gethostbyname(host_name) 
+    return "http://"+ip_address+":8000"
 
-ALLOWED_HOSTS = ["https://8000-ausaafnabi-washingbooki-r8b9qb2r822.ws-eu89.gitpod.io/","localhost"]
-CSRF_TRUSTED_ORIGINS = ["https://8000-ausaafnabi-washingbooki-y454rrsw2ii.ws-eu74.gitpod.io","https://8000-ausaafnabi-washingbooki-r8b9qb2r822.ws-eu89.gitpod.io"]
+ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = [get_ipaddress()]
 LOGIN_REDIRECT_URL = "/slot"
 
 # Application definition

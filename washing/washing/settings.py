@@ -27,11 +27,12 @@ DEBUG = True
 import socket
 def get_ipaddress():
     host_name = socket.gethostname()
-    ip_address = socket.gethostbyname(host_name) 
-    return "http://"+ip_address+":8000"
-
+    ip_address = socket.gethostbyname(host_name)
+    print(ip_address)
+    return "http://"+ip_address+":8000", "https://8000-{}.ws-eu89b.gitpod.io".format(host_name)
+or1,or2 = get_ipaddress()
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = [get_ipaddress()]
+CSRF_TRUSTED_ORIGINS = [or1,or2]
 LOGIN_REDIRECT_URL = "/slot"
 
 # Application definition
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    'crispy_bootstrap4',
     'slot'
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -57,7 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 ROOT_URLCONF = 'washing.urls'
 
 TEMPLATES = [
